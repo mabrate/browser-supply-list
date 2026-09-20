@@ -1,6 +1,7 @@
 # Chrome packaging output and signing material
 *.crx
 *.pem
+browser-supply-list.zip
 
 # Local development secrets and environment files
 .env
@@ -16,4 +17,3 @@ coverage/
 .DS_Store
 Thumbs.db
 .vscode/
-
