@@ -1,0 +1,19 @@
+# Chrome packaging output and signing material
+*.crx
+*.pem
+
+# Local development secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Dependencies, logs, and generated coverage
+node_modules/
+*.log
+coverage/
+
+# Operating-system and editor metadata
+.DS_Store
+Thumbs.db
+.vscode/
+

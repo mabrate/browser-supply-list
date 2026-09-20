@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Supply List",
+  "version": "1.0.0",
+  "description": "Build a Google Sheets supply list while browsing any store.",
+  "icons": { "128": "icon-128.png" },
+  "permissions": ["sidePanel", "storage", "tabs", "identity", "scripting"],
+  "host_permissions": ["https://www.googleapis.com/*"],
+  "optional_host_permissions": ["https://*/*", "http://*/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "side_panel": { "default_path": "sidepanel.html" },
+  "action": { "default_title": "Open Browser Supply List" },
+  "oauth2": {
+    "client_id": "230032696453-n1mjjrcck6e37ejpvvdtsqocf6s3as3a.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/spreadsheets"]
+  }
+}
