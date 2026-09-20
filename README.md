@@ -4,6 +4,8 @@ An unpacked Manifest V3 Chrome extension that keeps a Google Sheets worksheet as
 
 Browser Supply List turns a Google Sheets worksheet into a practical supply and purchasing list while you shop online. Keep the extension side panel open as you browse product pages: it reads useful product details such as the item name, price, vendor, image, product ID, and link, then lets you review and save the item directly to your chosen worksheet.
 
+See the [Privacy Policy](extension/PRIVACY.md) and [Terms of Service](extension/TERMS.md).
+
 The extension works across shopping sites and includes extra support for Amazon product pages. It recognizes products already saved to the selected worksheet, helping prevent duplicate entries and giving you the option to update or remove the matching item instead.
 
 You decide which spreadsheet columns appear while shopping. Fields stay editable, and less useful columns can be hidden from the side panel without changing your sheet. Your selected worksheet, field mappings, and visibility settings are remembered between browser sessions.
@@ -42,10 +44,11 @@ The mapping formulas are simple page-data keys in this version (`title`, `price`
 - Shopping-site access is now an optional, per-site permission requested only when the user clicks **Allow this shopping site**.
 - A first-use privacy disclosure and affirmative consent gate now appear before Sheet access.
 - `extension/PRIVACY.md` documents local storage, page-data use, Google Sheets use, and Google API Limited Use.
+- `extension/TERMS.md` documents use of the extension, user responsibilities, third-party services, and limitations.
 
 ### You must do before publishing
 
-1. Host the text in `extension/PRIVACY.md` at a public HTTPS URL you control. Replace the effective date and contact placeholder first, then enter that URL in the Chrome Web Store privacy-policy field.
+1. Host `extension/PRIVACY.md` and `extension/TERMS.md` at public HTTPS URLs you control. Replace the privacy policy’s contact placeholder before entering its URL in the Chrome Web Store privacy-policy field. The Terms URL can be supplied to the OAuth consent screen or other dashboard field that requests terms of service.
 2. In the Chrome Web Store Developer Dashboard, create the listing and prepare its description, screenshots, and permission justifications. Complete the store’s data-use disclosures accurately: product page data and Google Sheets data are used only for the supply-list feature and are not sold or used for advertising.
 3. Create a production OAuth client of type **Chrome Extension** in the Google Cloud project after you know the Store extension ID. Set that exact ID as the client’s Item ID, replace `oauth2.client_id` in `extension/manifest.json`, and reload/test the packaged extension. Enable the Google Sheets API and configure the OAuth consent screen for production.
 4. Complete any Google OAuth verification requested for the Sheets scope before inviting outside users.
