@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Browser Supply List",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Build a Google Sheets supply list while browsing any store.",
   "icons": { "128": "icon-128.png" },
   "permissions": ["sidePanel", "storage", "tabs", "identity", "scripting"],
